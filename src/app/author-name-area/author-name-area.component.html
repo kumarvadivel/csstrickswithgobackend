@@ -1,0 +1,9 @@
+<div class="author-name-area">
+    <div class="author-name-prefix">
+    Author
+    </div>
+    <a class="author-name" (click)="navigate($event)" >
+    {{name}} 
+    </a>
+</div>
+<ngx-spinner *ngIf="navi" bdColor = "rgba(0, 0, 0, 0.8)" size = "default" color = "#e78127" type = "ball-climbing-dot" [fullScreen] = "true"><p style="color: white" > Navigating to {{navigator}}... </p></ngx-spinner>

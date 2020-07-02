@@ -1,0 +1,76 @@
+<app-navbar></app-navbar>
+<div class="all-site-wrap">
+    <div class="post-area">
+        <div class="registerarea">
+            <header>Register</header>
+            <div class="formarea">
+                <form class="form-post" [formGroup]="registerform" (ngSubmit)="register($event)">
+                 <div class="box1">
+                    <label>Username</label>
+                    <input type="text" placeholder="Enter Username" formControlName="username">
+                 </div>
+                <div class="box2">
+                    <div class="box1">
+                        <label>Firstname</label>
+                        <input type="text" placeholder="Enter Firstname" formControlName="firstname" class="sub">
+                        
+                    </div>
+                          <div class="box1">
+                              <label>Lastname</label>
+                            <input type="text" placeholder="Enter Lastname" formControlName="lastname" class="sub">
+                    </div>
+                        </div>
+                <div class="box1">
+                    <label>Email</label>
+                    <input type="text" placeholder="Enter Email" formControlName="email">
+                    
+                </div>
+                <div class="box1">
+                    <label>Mobile Number</label>
+                    <input type="number" placeholder="Enter Mobile.no" formControlName="phone">
+                   
+                </div>
+                <div class="box1">
+                    <label>Upload Profile Image</label>
+                    <input type="file" placeholder="Choose a file to upload" (change)="converter($event)">
+                </div>
+                <div class="box2">
+                    <div class="box1">
+                        <label>Password</label>
+                        <input type="password" placeholder="Enter password" formControlName="password">
+                        
+                    </div>
+                    <div class="box1">
+                        <label>Re-enter Password</label>
+                
+                <input type="password" placeholder="Re-enter password" formControlName="reenter">
+                
+                    </div>
+                   </div>
+               
+                <div class="alert alert-danger box1 c s" *ngIf="toggler" role="alert">
+                    {{message}}
+                  </div>
+                  <div class="box1 s c">
+                    <input type="submit" value="Sign Up" class="submit">
+                  </div>
+                  <div class="box1 s c">
+                      Already a User?
+                    <a class="box1 s c" [routerLink]="['/login']" routerLinkActive="router-link-active" >
+                      login
+                    </a>
+                  </div>
+                  
+                
+            </form> 
+        </div>
+        </div>
+        <div class="imagearea" *ngIf="imagebase64">
+            <img src={{imagebase64}} alt="dd">
+        </div>
+        <div class="imagearea" *ngIf="!imagebase64">
+            <img src="https://static.wixstatic.com/media/a4e093_c2e26ce072304839a822f3dda90b0ad7~mv2.png/v1/fill/w_292,h_292,al_c,q_85,usm_0.66_1.00_0.01/profile-picture-unknown-3.webp" alt="dd">
+        </div>
+    </div>
+</div>
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "default" color = "#e78127" type = "ball-climbing-dot" [fullScreen] = "true"><p style="color: white" > Registering user... </p></ngx-spinner>

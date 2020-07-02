@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+<div class="all-site-wrap">
+    <div class="post-area">
+        <div class='loginarea'>
+            <header>Login</header>
+            <form class="form-post" (ngSubmit)="login($event)" [formGroup]="loginform">
+                <label>Username</label>
+                <input type="text" placeholder="Enter Username" formControlName="username" >
+                <label>Password</label>
+                <input type="password" placeholder="Enterpassword"  formControlName="password">
+               
+                <input type="submit" value="Login" class="submit">
+            </form> 
+            <span>Are you feeling to create a Account??</span><a href="/register">click here.</a>
+        </div>
+        
+    </div>
+   
+</div>
+<ngx-spinner *ngIf="navi" bdColor = "rgba(0, 0, 0, 0.8)" size = "default" color = "#e78127" type = "ball-climbing-dot" [fullScreen] = "true"><p style="color: white" > Logging in... </p></ngx-spinner>

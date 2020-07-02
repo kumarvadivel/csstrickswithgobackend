@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<div class="all-site">
+    <div class="post-area">
+        <h1>Create a New Post</h1>
+        <form class="form-post" (ngSubmit)="postdata($event)" [formGroup]="postform">
+            <label>Article Meta</label>
+            <select  formControlName="articlemeta">
+                <option value="" selected></option>
+                <option value="Article">Article</option>
+                <option value="Blog">Blog</option>
+                <option value="Link">Link</option>
+            </select>
+            <label>Article Title</label>
+            <input type="text" placeholder="Enter Article title" formControlName="articletitle">
+            <label>Post Content</label>
+             <textarea class='post-body' formControlName="postcontent"></textarea>
+             <span *ngIf="message">{{message}}</span>
+             <input type="submit" value="Post" class="submit">
+        </form>
+        
+    </div>
+</div>
+<ngx-spinner *ngIf="navi" bdColor = "rgba(0, 0, 0, 0.8)" size = "default" color = "#e78127" type = "ball-climbing-dot" [fullScreen] = "true"><p style="color: white" > Adding new post... </p></ngx-spinner>
+
+

@@ -1,0 +1,36 @@
+<div class="hero-article-article articlearea">
+    <div class="content">
+        <div class='box1'>
+            <header class="article-publication-meta">
+                <strong>{{hero.articlemeta}}</strong>
+                <time datetime="2020-06-05">
+                {{hero.articledate}}</time>
+            </header>
+            <h1>
+                <a href="https://css-tricks.com/video-screencasts/189-notion-for-personal-public-use/">
+                {{hero.articletitle}}</a>
+            </h1>
+            <div class='article-content-meta'>
+                <app-author-avatar [img]='hero.authorimagelink'></app-author-avatar>
+                <app-author-name-area [name]='hero.authorname'></app-author-name-area>
+                <app-articlecomments></app-articlecomments>
+            </div>
+            <div class="article-content">
+                <p>{{hero.postcontent}}</p>
+            </div>
+        </div>
+        <div class='box2'>
+            <app-ad-banner [addata]='bannerdata'></app-ad-banner>
+        </div>
+    </div>
+    
+    
+    
+    <div class="button-area">
+        <button class='btn' (click)='edit($event)'>Edit</button>
+        <button class='btn' (click)='delete($event)'>Delete</button>
+    </div>
+    
+    
+</div>
+<ngx-spinner *ngIf="navigator" bdColor = "rgba(0, 0, 0, 0.8)" size = "default" color = "#e78127" type = "ball-climbing-dot" [fullScreen] = "true"><p style="color: white" >  {{navigator}}... </p></ngx-spinner>

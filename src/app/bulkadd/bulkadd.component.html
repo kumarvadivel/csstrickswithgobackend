@@ -1,0 +1,63 @@
+<app-navbar></app-navbar>
+<div class="postarea">
+    <header>
+        <h1>Bulk post</h1>
+    </header>
+    <main>
+        <div class="box2">
+            <form (submit)="postdata($event)">
+                <div class="box1 p">
+                <label class="p">import post in csv format</label>
+                <input type="file" class="p"  #uploads  (change)="onChange(uploads.files)" multiple
+                value="process" accept=".csv">
+            </div>
+            <div class="box1">
+                <input type="submit" class="submit"/>
+            </div>
+            
+            </form>
+        
+       
+            <header>
+               <h5>instructions</h5>
+            </header>
+            <main>
+                <ol>
+                    <li>
+                        Bulk post data file should have <span>(*.csv) </span>extension
+                    </li>
+                    <li>
+                       Required datas for file is:
+                       <ul>
+                           <div class="mar">
+                           <li><span>articlemeta</span></li>
+                           <li><span>articletitle</span></li>
+                           <li><span>postcontent</span></li>
+                        </div>
+                    </ul>
+                    </li>
+                    <li>
+                        There are only three types of posts are allowed in this site they are:
+                        <div class="mar"> <ul>
+                            
+                                <li><span>Article</span></li>
+                            <li><span>Link</span></li>
+                            <li><span>Blog</span></li>
+                            
+                            
+                        </ul></div>
+                        
+                    </li>
+                    <li>
+                        These posttype should be mentioned under <span>articlemeta(1st column of csv file)</span>.
+                    </li>
+                    <li>
+                        for <span>sample</span> bulk upload csv file <a download="sample" href="../../assets/data.csv">click here</a>
+                    </li>
+                </ol>
+            </main>
+        
+        </div>
+    </main>
+</div>
+<ngx-spinner *ngIf="navi" bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#e76f23" type = "ball-climbing-dot" [fullScreen] = "true"><p style="color: white" > posting {{length}} posts from csv ... </p></ngx-spinner>

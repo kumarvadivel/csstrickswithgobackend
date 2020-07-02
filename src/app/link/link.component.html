@@ -1,0 +1,14 @@
+<app-navbar></app-navbar>
+
+<div class="all-site">
+    
+    <div class="postarea">
+        <header>Link</header>
+        <div *ngIf="data">
+        <app-articlecustom  *ngFor="let hero of data" [hero]='hero'></app-articlecustom></div>
+        <img *ngIf="!data" src="https://www.seekpng.com/png/detail/151-1519416_pool-parties-in-bangalore-no-data-found-images.png" alt="Pool Parties In Bangalore - No Data Found Images Png@seekpng.com">
+    </div>
+    
+</div>
+
+

@@ -1,0 +1,25 @@
+<article class="mini-card module module-article article" id="mini-post-306971">
+    <header class="mini-article-card-header">
+        <div class="mini-article-card-title">
+            <div class="mini-article-subhead">
+            {{minicard.meta}}
+                <time datetime="2020-04-24">
+                {{minicard.date}} </time>
+            </div>
+            <h2 class="">
+                <a href="https://css-tricks.com/how-to-make-a-css-only-carousel/" class="article-card-header read-article">
+                {{minicard.title}} </a>
+            </h2>
+        </div>
+    </header>
+    <div class="mini-article-meta">
+        <div class="mini-article-byline">
+            <app-author-avatar [img]='minicard.author_img'></app-author-avatar>
+            <app-author-name-area [name]='minicard.author_name'></app-author-name-area>
+        </div>
+        <div class="tags">
+            <a *ngFor="let tags of minicard.tags" href="https://css-tricks.com/tag/carousel/" rel="tag">{{tags.value}}</a> 
+           
+        </div>
+    </div>
+</article>

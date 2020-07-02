@@ -1,0 +1,14 @@
+<div class="popular-articles">
+    <header class="popular-header header-card white-underline-links">
+        <h2 class="header-card-title">
+        Popular <br>this <br>month
+        </h2>
+        <p class="header-card-sponsor">Sponsored by<br>
+        <a href="https://frontendmasters.com/?utm_source=css-tricks&amp;utm_medium=website&amp;utm_campaign=css-tricks-monthly-site-sponsor">Frontend Masters</a>
+        </p>
+    </header>
+    <div class='mini-card-grid'>
+        <app-mini-card *ngFor="let minicard of minidata" [minicard]='minicard'></app-mini-card>
+       
+    </div>
+</div>

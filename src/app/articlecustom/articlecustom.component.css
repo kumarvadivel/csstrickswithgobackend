@@ -1,0 +1,24 @@
+.seperator{
+    border:1px solid white;
+}
+.articlearea{
+    margin: 15px 0 0 0;
+}
+.button-area{
+    display: flex;
+}
+.button-area>button{
+    margin: 15px 15px 15px 15px;
+}
+.box1{
+    padding-right: 13%;
+    margin-left: 3%;
+}
+.box2{
+    margin-top: 5%;
+    margin-left: -10%;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+}

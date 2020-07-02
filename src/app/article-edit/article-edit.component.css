@@ -1,0 +1,41 @@
+.seperator{
+    border:1px solid white;
+}
+.articlearea{
+    margin: 15px 0 0 0;
+}
+.button-area{
+    display: flex;
+}
+.button-area>button{
+    margin: 15px 15px 15px 15px;
+}
+.box1{
+    padding-right: 13%;
+}
+.box2{
+    margin-top: 5%;
+    margin-left: -10%;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+}
+.btn{
+    
+        background-image: linear-gradient(to top left,#ff8a00,#e52e71)!important;
+        color: #fff!important;
+        display: inline-block;
+        font-family: inherit;
+        font-weight: 700;
+        border: 0;
+        border-radius: 8px!important;
+        white-space: nowrap;
+        padding: .5rem 1.5rem;
+        line-height: 1.4;
+        text-align: center;
+        transition: .07s;
+        position: relative;
+        text-decoration: none!important;
+    
+}

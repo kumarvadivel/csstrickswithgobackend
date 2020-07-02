@@ -1,0 +1,38 @@
+<footer class="site-footer footer-newsletter">
+<div class="footer-newsletter-inside">
+<hr class="thick">
+<h2>How do you stay up to date in this fast⁠-⁠moving&nbsp;industry?</h2>
+<p>A good start is to sign up for our weekly hand-written newsletter. We bring you the best articles and ideas
+from around the web, and what we think about them.</p>
+<div id="footer-form-wrap">
+<form (ngSubmit)="subscribe($event)" [formGroup]="mailinglist">
+<label for="mce-EMAIL" class="screen-reader">Email Address</label>
+<input type="email" name="EMAIL" class="required email mailchimp-email-input" id="mce-EMAIL" placeholder="lovetricks@internet.cool" required="" formControlName="email">
+<input type="submit" value="Subscribe" name="Subscribe" id="mc-embedded-subscribe" class="button subscribe-button btn">
+</form>
+
+</div>
+<div class="social-links">
+<a href="https://www.facebook.com/CSSTricks/" class="social-link-facebook">
+<strong>Facebook</strong>
+<span>@CSSTricks</span>
+</a>
+<a href="https://twitter.com/css" class="social-link-twitter">
+<strong>Twitter</strong>
+<span>@CSS</span>
+</a>
+<a href="https://www.youtube.com/user/realcsstricks" class="social-link-youtube">
+<strong>YouTube</strong>
+<span>@realcsstricks</span>
+</a>
+<a href="https://www.instagram.com/real_css_tricks/" class="social-link-instagram">
+<strong>Instagram</strong>
+<span>@real_css_tricks</span>
+</a>
+<a href="https://css-tricks.com/feed/" class="social-link-rss">
+<strong>RSS</strong>
+<span>Feed</span>
+</a>
+</div>
+</div>
+</footer>

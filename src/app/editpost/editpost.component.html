@@ -1,0 +1,16 @@
+<app-navbar></app-navbar>
+
+<div class="all-site">
+    <div class="post-area">
+        <h1> Edit Post</h1>
+        <form class="form-post" (ngSubmit)="postdata($event)" [formGroup]="editform">
+            <label>Article Title</label>
+            <input type="text" placeholder="Enter Article title" formControlName="articletitle" value={{data.articletitle}}>
+            <label>Post Content</label>
+             <textarea class='post-body' formControlName="postcontent" value={{data.postcontent}}></textarea>
+             <input type="submit" value="Post" class="submit">
+        </form>
+    </div>
+</div>
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "default" color = "#e78127" type = "ball-climbing-dot" [fullScreen] = "true"><p style="color: white" > Saving new changes... </p></ngx-spinner>
+

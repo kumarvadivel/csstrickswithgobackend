@@ -1,0 +1,20 @@
+.postarea{
+    padding: 30px 15px 15px 15px;
+    margin: 15px 15px 15px 15px;
+    background-color: #17141d;
+    border-radius: 20px;
+}
+img{
+    padding-top: 3rem;
+    margin-left: 10rem;
+    padding-bottom: 3rem;
+}
+header:hover{
+    color: #ee5c36;
+
+}
+header{
+    text-align: center;
+    font-weight: 900;
+    font-size: 40px;
+}
