@@ -8,7 +8,7 @@ import { Component, Input} from '@angular/core';
 export class AdBannerComponent {
 
   constructor() { }
-
+  dat:string;
   @Input() addata:any;
 
  
