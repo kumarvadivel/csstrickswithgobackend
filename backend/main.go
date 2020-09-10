@@ -5,7 +5,7 @@ import (
 	"net/http"
 	
 
-	
+	"./middlewares"
 	"./controllers"
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
@@ -15,6 +15,7 @@ import (
 func main() {
 	fmt.Println("Starting the application...")
 	r := mux.NewRouter()
+	r.Use(middlewares.AuthenticationMiddleware)
 	headers := handlers.AllowedHeaders([]string{"X-Requested-with", "Content-Type", "Authorisation"})
 	methods := handlers.AllowedMethods([]string{"GET", "POST", "PUT", "DELETE"})
 	origins := handlers.AllowedOrigins([]string{"http://localhost:4200"})
