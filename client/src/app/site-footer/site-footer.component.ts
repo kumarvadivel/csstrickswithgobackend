@@ -27,7 +27,8 @@ export class SiteFooterComponent implements OnInit {
     })
   }
   constructor(private httpclient:HttpClient,public router:Router,private toastr: ToastrService) {
-    this.httpclient.get("http://localhost:3000/authenticate",{withCredentials:true}).subscribe(data=>{
+    this.httpclient.get("http://localhost:3000/authenticate",{withCredentials:true}).subscribe(data => {
+      
         this.username=data.username
         this.httpclient.get("http://localhost:3000/getuserprofile/"+this.username).subscribe(data=>{
           this.mailinglist.setValue({

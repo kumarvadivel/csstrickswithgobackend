@@ -31,7 +31,8 @@ export class RegisterComponent implements OnInit {
     this.handleInputChange(file);
   }
   handleInputChange(files){
-    var file=files
+    var file=files 
+    var ff;
     var pattern = /image-*/;
     var reader = new FileReader();
     if (!file.type.match(pattern)) {
